@@ -1,0 +1,65 @@
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contato - Matheus Viana</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <nav class="top-nav">
+    <div class="nav-left"></div>
+    <div class="nav-right">
+       <div class="menu-toggle" id="menu-toggle">⋮</div>
+      <div class="dropdown-menu" id="dropdown-menu">
+      <a href="index.html">Início</a>
+      <a href="Habilidade.html">Habilidade</a>
+      <a href="projetos.html">Projetos</a>
+      <a href="contato.html" class="active">Contato</a>
+        </div>
+    </div>
+  </nav>
+  <main class="content">
+    <h2>Entre em Contato</h2>
+    <form class="contact-form">
+      <input type="text" placeholder="Seu nome" required>
+      <input type="email" placeholder="Seu e-mail" required>
+
+      <textarea placeholder="Sua mensagem" required></textarea>
+      <button id="submit" onsubmit="enviarFormulario()">Enviar</button>
+
+      <div class="social-links">
+        <h3>Redes Sociais</h3>
+        <div class="social-icons">
+          <p><a href="https://instagram.com/viana.mgl" target="_blank">
+              <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram"
+                style="width:32px; height:32px; vertical-align:middle;"></a></p>
+
+          <p><a href="https://wa.me/5579998908902" target="_blank"> <img
+                src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp"
+                style="width:32px; height:32px; vertical-align:middle;">
+            </a></p>
+        </div>
+      </div>
+
+    </form>
+  </main>
+</body>
+
+<script>
+  function enviarFormulario(event) {
+    event.preventDefault();
+    const mensagemStatus = document.getElementById("Sua mensagem");
+    mensagemStatus.textContent = "Mensagem enviada com sucesso!";
+    mensagemStatus.style.color = "green";
+
+    setTimeout(() => {
+      mensagemStatus.textContent = "";
+    }, 3000);
+  }
+
+</script>
+<script src="script.js"></script>
+
+</html>
